@@ -54,8 +54,6 @@ func Logger(logger logrus.FieldLogger) gin.HandlerFunc {
 		} else {
 			if statusCode > 499 {
 				entry.Error()
-			} else if statusCode > 399 {
-				entry.Warn()
 			} else {
 				entry.Info()
 			}
